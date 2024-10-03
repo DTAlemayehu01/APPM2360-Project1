@@ -7,15 +7,17 @@ end
 
 % Conditions
 
-% Consider the cartesian product of the two sets
+% Consider the cartesian product of the two sets of p and q
 p_space = [1 1.5 2];
 q_space = [1 1.5 2];
 % Thus we have our ordered pairs of curve constants
 [P,Q] = meshgrid(p_space,q_space);
+% Number of ordered pairs
 paring_count = numel([P(:)]);
 % Y Range
 y_space = linspace(0,10,200);
 
+% harvesting function output
 result_space = [];
 for i = 1:paring_count
     h_y = harvest_function(y_space, P(i), Q(i));
@@ -23,7 +25,6 @@ for i = 1:paring_count
 end
 
 plot(y_space, result_space);
-
 
 legend_space = [];
 for i = 1:paring_count
