@@ -5,7 +5,6 @@ function f = harvest_function(y, p, q)
     f = numerator./denominator;
 end
 
-
 % Conditions
 
 % Consider the cartesian product of the two sets
@@ -34,3 +33,5 @@ end
 
 legend(legend_space);
 
+mycolors = ["#f0f921"; "#fdc527"; "#f89540"; "#e66c5c"; "#cc4778"; "#aa2395"; "#7e03a8"; "#4c02a1"; "#0d0887"];
+colororder(mycolors);
