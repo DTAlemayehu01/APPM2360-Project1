@@ -1,0 +1,24 @@
+#+title: Notes
+
+* Analysis
+1. What are \(r\) and \(L\)
+   - \(r\) is the hundreds of fish per month birth rate?
+   - \(L\) is the maximum number of fish that can live in the pond, in hundreds of fish?
+2. Graphing question, look to matlab/python, or should i graph myself?
+3. graph myself?
+4. Explor equil + stability
+   a. Equilibrium solution: a solution where (hmm, not sure how to describe, it can be stable/unstable)
+   b. hmm
+      1. graph?
+      2. Newton's in python?
+      3. Graph?
+      4. graph?
+* Numerical Solution
+1. Code to implement Euler's
+2. Euler's pattern analysis
+* Final Remarks/Report Conclusion
+- Which species of trout best stock the lake
+- Model weaknesses?
+- How can model be improved?
+- What effects should model account for?
+- Etc?
