@@ -4,13 +4,17 @@
 1. What are \(r\) and \(L\)
    - \(r\) is the hundreds of fish per month birth rate?
    - \(L\) is the maximum number of fish that can live in the pond, in hundreds of fish?
-2. Graphing question, look to matlab/python, or should i graph myself?
+2. Graphing question: See ~analysis_q2.m~ for graph
    - Estimates:
      - L = 5.4, Y = 5, Rainbow
      - L = 8.1, Y = 7, Brown
      - L = 16.3 Y = 12, Brook
-3. graph myself?
-4. Explor equil + stability
+3. Graphing question: See ~analysis_q3.m~ for graph
+   - Notes:
+     - \(\displaystyle \lim_{y\to\infty} h(y) = p\)
+     - \(\displaystyle \lim_{y\to 0} h(y) = 0\)
+     - Yes this obviously makes physical sense, when there's no fish, there's no harvesting, and when there's loads of fish the harvesting is bounded by the rate people harvest.
+4. Explor equil + stability (Eli)
    a. Equilibrium solution: a solution where (hmm, not sure how to describe, it can be stable/unstable)
    b. hmm
       1. graph?
