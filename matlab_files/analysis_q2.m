@@ -22,3 +22,5 @@ for i = 1:3
 end
 
 plot(t_space, y_space);
+
+legend('Rainbow Trout', 'Brown Trout', 'Brook Trout');

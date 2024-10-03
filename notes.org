@@ -5,6 +5,10 @@
    - \(r\) is the hundreds of fish per month birth rate?
    - \(L\) is the maximum number of fish that can live in the pond, in hundreds of fish?
 2. Graphing question, look to matlab/python, or should i graph myself?
+   - Estimates:
+     - L = 5.4, Y = 5, Rainbow
+     - L = 8.1, Y = 7, Brown
+     - L = 16.3 Y = 12, Brook
 3. graph myself?
 4. Explor equil + stability
    a. Equilibrium solution: a solution where (hmm, not sure how to describe, it can be stable/unstable)
