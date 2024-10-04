@@ -76,3 +76,27 @@ end
 plot(t_space, y_space);
 legend(legend_space);
 grid
+
+% at y_0 = 2000 there is a negative OF because euler's approximates below 0
+figure(5)
+
+% Redefined Constants
+
+% New Euler Step-Size
+h = 0.0001;
+
+% number of terms in the Euler sequence
+count = 80/h;
+
+% domain of interest (parameterized by t months)
+t_space = linspace(0, 80, 80/h + 1);
+
+y_space = [];
+legend_space = [];
+for i = 1:3
+    y_space = [y_space; y_n(y_0(4), count, h, L(i))];
+    legend_space = [legend_space; sprintf("L = %.1f", L(i))];
+end
+plot(t_space, y_space);
+legend(legend_space);
+grid
