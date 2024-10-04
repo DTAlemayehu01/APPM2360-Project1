@@ -22,8 +22,9 @@
       3. Graph?
       4. graph?
 * Numerical Solution
-1. Code to implement Euler's
+1. Graphing question: See ~numerical_q1.m~ for graph
 2. Euler's pattern analysis
+   1. I don't think my graph is right?
 * Final Remarks/Report Conclusion
 - Which species of trout best stock the lake
 - Model weaknesses?
