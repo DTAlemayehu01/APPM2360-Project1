@@ -23,4 +23,7 @@ end
 
 plot(t_space, y_space);
 
+title('Logistic Growth of Trout Species');
+xlabel('Time (months)');
+ylabel('Population (in hundreds)');
 legend('Rainbow Trout', 'Brown Trout', 'Brook Trout');

@@ -33,6 +33,9 @@ for i = 1:paring_count
 end
 
 legend(legend_space);
+title('Rate of Trout Harvesting');
+xlabel('Fish Population (in hundreds)');
+ylabel('Harvest Rate (hundreds of trout per month)');
 
 mycolors = ["#f0f921"; "#fdc527"; "#f89540"; "#e66c5c"; "#cc4778"; "#aa2395"; "#7e03a8"; "#4c02a1"; "#0d0887"];
 colororder(mycolors);

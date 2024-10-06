@@ -40,8 +40,9 @@ fplot(dy_browntrout, [0 15]);
 fplot(dy_brooktrout, [0 15]);
 fplot(dy_rainbowtrout, [0 15]);
 
-xlabel('y values');
-ylabel('value of f(y)')
+title('Trout Population Growth Rate vs Trout Population')
+xlabel('Trout Population (in hundreds)');
+ylabel('Rate of Trout Population Growth (hundreds per month)')
 legend('Brown Trout',  'Brook Trout', 'Rainbow Trout', 'location', 'southwest');
 
 hold off;
@@ -130,7 +131,7 @@ else
 hold off
 end
 axis([tval(1)-dt/2,tval(end)+dt/2,yval(1)-dy/2,yval(end)+dy/2])
-xlabel('t values');
-ylabel('y values');
+xlabel('Time (months)');
+ylabel('Trout Population (in hundreds)');
 yline(x, 'k', 'LineWidth', 1.2);
 end

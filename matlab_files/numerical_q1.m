@@ -20,7 +20,7 @@ h = 0.01;
 % Carrying capacities
 L = [5.4 8.1 16.3];
 % Inital Fish Populations
-y_0 = [50, 100, 200, 2000];
+y_0 = [0.5, 1, 2, 20];
 
 % number of terms in the Euler sequence
 count = 80/h;
@@ -28,15 +28,21 @@ count = 80/h;
 % domain of interest (parameterized by t months)
 t_space = linspace(0, 80, 80/h + 1); 
 
+% species array
+species = ["Rainbow Trout"; "Brown Trout"; "Brook Trout"];
+
 figure(1)
 % Fish population at given t
 y_space = [];
 legend_space = [];
 for i = 1:3
     y_space = [y_space; y_n(y_0(1), count, h, L(i))];
-    legend_space = [legend_space; sprintf("L = %.1f", L(i))];
+    legend_space = [legend_space; sprintf("%s: L = %.1f", species(i), L(i))];
 end
 plot(t_space, y_space);
+title(sprintf("Euler Apprxoimation of Fish Population when y_0 = %.1f", y_0(1)));
+xlabel('Time (months)');
+ylabel('Fish Population (in hundreds)');
 legend(legend_space);
 grid
 
@@ -47,10 +53,13 @@ y_space = [];
 legend_space = [];
 for i = 1:3
     y_space = [y_space; y_n(y_0(2), count, h, L(i))];
-    legend_space = [legend_space; sprintf("L = %.1f", L(i))];
+    legend_space = [legend_space; sprintf("%s: L = %.1f", species(i), L(i))];
 end
 plot(t_space, y_space);
 legend(legend_space);
+title(sprintf("Euler Apprxoimation of Fish Population when y_0 = %.1f", y_0(2)));
+xlabel('Time (months)');
+ylabel('Fish Population (in hundreds)');
 grid
 
 figure(3)
@@ -59,10 +68,13 @@ y_space = [];
 legend_space = [];
 for i = 1:3
     y_space = [y_space; y_n(y_0(3), count, h, L(i))];
-    legend_space = [legend_space; sprintf("L = %.1f", L(i))];
+    legend_space = [legend_space; sprintf("%s: L = %.1f", species(i), L(i))];
 end
 plot(t_space, y_space);
 legend(legend_space);
+title(sprintf("Euler Apprxoimation of Fish Population when y_0 = %.1f", y_0(3)));
+xlabel('Time (months)');
+ylabel('Fish Population (in hundreds)');
 grid
 
 figure(4)
@@ -71,32 +83,35 @@ y_space = [];
 legend_space = [];
 for i = 1:3
     y_space = [y_space; y_n(y_0(4), count, h, L(i))];
-    legend_space = [legend_space; sprintf("L = %.1f", L(i))];
+    legend_space = [legend_space; sprintf("%s: L = %.1f", species(i), L(i))];
 end
 plot(t_space, y_space);
 legend(legend_space);
+title(sprintf("Euler Apprxoimation of Fish Population when y_0 = %.1f", y_0(4)));
+xlabel('Time (months)');
+ylabel('Fish Population (in hundreds)');
 grid
 
-% at y_0 = 2000 there is a negative OF because euler's approximates below 0
-figure(5)
-
-% Redefined Constants
-
-% New Euler Step-Size
-h = 0.0001;
-
-% number of terms in the Euler sequence
-count = 80/h;
-
-% domain of interest (parameterized by t months)
-t_space = linspace(0, 80, 80/h + 1);
-
-y_space = [];
-legend_space = [];
-for i = 1:3
-    y_space = [y_space; y_n(y_0(4), count, h, L(i))];
-    legend_space = [legend_space; sprintf("L = %.1f", L(i))];
-end
-plot(t_space, y_space);
-legend(legend_space);
-grid
+% % at y_0 = 2000 there is a negative OF because euler's approximates below 0
+% figure(5)
+% 
+% % Redefined Constants
+% 
+% % New Euler Step-Size
+% h = 0.0001;
+% 
+% % number of terms in the Euler sequence
+% count = 80/h;
+% 
+% % domain of interest (parameterized by t months)
+% t_space = linspace(0, 80, 80/h + 1);
+% 
+% y_space = [];
+% legend_space = [];
+% for i = 1:3
+%     y_space = [y_space; y_n(y_0(4), count, h, L(i))];
+%     legend_space = [legend_space; sprintf("%s: L = %.1f", species(i), L(i))];
+% end
+% plot(t_space, y_space);
+% legend(legend_space);
+% grid
