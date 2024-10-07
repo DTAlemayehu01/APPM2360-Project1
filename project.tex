@@ -172,9 +172,9 @@ Some interesting things to note above:
             \item \(y = 5.4418\) is stable for Brown Trouts.
         \end{itemize}
     \item The Rainbow Trout has only one stable equilibrium and it's at a small value for the population.
-    \item The Brook Trout may have a semi-stable solution at \(y = 1\)?
+    \item The Brook Trout nearly approaches a solution at \(y = 1\) but doesn't actually have one at that point.
     \item No Trout Species can ever go extinct because for all \(y > 0\) the solution tends towards a positive equilibrium state.
-    \item The Brook Trout population always approaches it's maximal stable equilibrium 
+    \item The Brook Trout population always approaches it's maximal stable equilibrium given that \(y > 0\).
 \end{itemize}
 \section{Numerical Analysis} 
 To get a better grasp of the Trout Population in relation to harvesting by the neighborhood, we can also apply Euler's method to approximate the fish population at a given time. 
@@ -223,11 +223,10 @@ We'll utilize Equation \eqref{eq:1} to identify our slope for Euler's Method wit
 In conclusion, we can choose a species to stock the lake given a variety of conditions.
 \begin{itemize}
     \item If we want to stock the lake while staring with the fewest fish possible we should choose the Brook Trout since their species can accomidate the most harvesting because their species usually reaches near their carrying capacity.
-    \item If we want to stock the lake....
     \item Either way for any species we won't overfish the lake so choosing based on that criterion is largely irrelevant.
 \end{itemize}
 But our model doesn't account for a critical array of information. 
-For starters, we'll likely need to stock the lake with prey for the fish as well so they don't die out whiel being fished and that may effect how much of the Trout can reside in the lake.
+For starters, we'll likely need to stock the lake with prey for the fish as well so they don't die out while being fished and that may effect how much of the Trout can reside in the lake.
 We also don't take into account any season or other temportal related effects into our model when stocking the lake.
 Stocking the lake in winter may prove detrimental to the fish population while stocking during spring mating season will allow for the fish population to grow much faster.
 Finally, it would also be worthwhile to consider stocking the lake with a mixture of Trout species if they are not predators of each other.
