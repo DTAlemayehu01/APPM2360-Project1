@@ -31,3 +31,4 @@
 - How can model be improved?
 - What effects should model account for?
 - Etc?
+* Need to finish draft
