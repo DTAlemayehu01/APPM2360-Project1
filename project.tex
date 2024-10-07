@@ -163,11 +163,18 @@ Below direction fields for each Trout species is modelled:
 \end{figure}
 Some interesting things to note above:
 \begin{itemize}
-    \item For all graphs \(y = 0\) is a semistable solution, unstable in the \(-y\) direction.
-    \item Is the Brown trout the only species with 4 equilibriums?
-    \item The carrying capacity is a stable equilibrium
-    \item Is the harvesting rate semi-stable?
-    \item No Trout Species can ever go extinct because for all \(y > 0\) the solution tends towards either the carrying capacity or the harvesting rate?
+    \item For all graphs \(y = 0\) is an unstable solution, specifically, all solutions tend away from \(y = 0\).
+    \item The Brown trout the only species with 4 equilibrium solutions, 2 stable, 2 unstable 
+        \begin{itemize}
+            \item \(y = 0\) is unstable as previously mentioned.
+            \item \(y = 0.8018\) is stable for Brown Trouts.
+            \item \(y = 1.8564\) is unstable for Brown Trouts.
+            \item \(y = 5.4418\) is stable for Brown Trouts.
+        \end{itemize}
+    \item The Rainbow Trout has only one stable equilibrium and it's at a small value for the population.
+    \item The Brook Trout may have a semi-stable solution at \(y = 1\)?
+    \item No Trout Species can ever go extinct because for all \(y > 0\) the solution tends towards a positive equilibrium state.
+    \item The Brook Trout population always approaches it's maximal stable equilibrium 
 \end{itemize}
 \section{Numerical Analysis} 
 To get a better grasp of the Trout Population in relation to harvesting by the neighborhood, we can also apply Euler's method to approximate the fish population at a given time. 

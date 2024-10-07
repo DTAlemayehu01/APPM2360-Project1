@@ -99,15 +99,15 @@ f_RT = @(t,y) 0.65*(1-y/5.4)*y - (1.2*y^2)/(1+y^2);
 
 %Direction field for Brown Trout with equilibrium solutions
 figure();
-dirfield(f_BNT, 0:1.5:60, -5:1.5:20, equil_solns_BNT);
+dirfield(f_BNT, 0:1.5:60, -5:0.5:20, equil_solns_BNT);
 title('Brown Trout Direction Field w/ Equil. Solns');
 %Direction field for Brook Trout with equilibrium solutions
 figure();
-dirfield(f_BKT, 0:1.5:60, -5:1.5:20, equil_solns_BKT);
+dirfield(f_BKT, 0:1.5:60, -5:0.5:20, equil_solns_BKT);
 title('Brook Trout Direction Field w/ Equil. Solns');
 %Direction field for Rainbow Trout with equilibrium solutions
 figure();
-dirfield(f_RT, 0:1.5:60, -5:1.5:20, equil_solns_RT);
+dirfield(f_RT, 0:1.5:60, -5:0.5:20, equil_solns_RT);
 title('Rainbow Trout Direction Field w/ Equil. Solns');
 
 

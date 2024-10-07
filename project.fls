@@ -504,6 +504,7 @@ INPUT ./figures/fig.3.4.3.png
 INPUT ./figures/fig.3.4.3.png
 INPUT ./figures/fig.3.4.3.png
 INPUT ./figures/fig.3.4.3.png
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./figures/fig.4.1.1.png
 INPUT ./figures/fig.4.1.1.png
 INPUT ./figures/fig.4.1.1.png
