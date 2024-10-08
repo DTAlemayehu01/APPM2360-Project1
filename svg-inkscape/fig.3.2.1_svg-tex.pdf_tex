@@ -73,11 +73,11 @@
     \put(0.07619054,0.22500036){\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Population (in hundreds)\end{tabular}}}}}%
     \put(0.27857196,0.70669643){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Logistic Growth of Trout Species}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{fig.3.2.1_svg-tex.pdf}}%
-    \put(0.72142857,0.64821429){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Rainbow Trout\end{tabular}}}}%
+    \put(0.24285714,0.64464286){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Rainbow Trout\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{fig.3.2.1_svg-tex.pdf}}%
-    \put(0.72142857,0.61875){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Brown Trout\end{tabular}}}}%
+    \put(0.24285714,0.61517857){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Brown Trout\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{fig.3.2.1_svg-tex.pdf}}%
-    \put(0.72142857,0.58928571){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Brook Trout\end{tabular}}}}%
+    \put(0.24285714,0.58571429){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Brook Trout\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{fig.3.2.1_svg-tex.pdf}}%
   \end{picture}%
 \endgroup%

@@ -72,11 +72,11 @@
     \put(0.04047625,0.02500036){\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Rate of Trout Population Growth (hundreds per month)\end{tabular}}}}}%
     \put(0.14910768,0.70669643){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Trout Population Growth Rate vs Trout Population}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{fig.3.4.1_svg-tex.pdf}}%
-    \put(0.23392857,0.16964286){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Brown Trout\end{tabular}}}}%
+    \put(0.68214286,0.17142857){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Brown Trout\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{fig.3.4.1_svg-tex.pdf}}%
-    \put(0.23392857,0.14017857){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Brook Trout\end{tabular}}}}%
+    \put(0.68214286,0.14196429){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Brook Trout\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{fig.3.4.1_svg-tex.pdf}}%
-    \put(0.23392857,0.11071429){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Rainbow Trout\end{tabular}}}}%
+    \put(0.68214286,0.1125){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Rainbow Trout\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{fig.3.4.1_svg-tex.pdf}}%
   \end{picture}%
 \endgroup%

@@ -14,14 +14,31 @@
 \usepackage{svg}
 \usepackage{setspace}
 \usepackage{physics}
-\usepackage{hyperref}
 \usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{changepage}
 \allowdisplaybreaks
 \doublespacing
+
+\usepackage[title]{appendix}
+\usepackage{lipsum}
+
+\usepackage{listings}
+\lstset{ %
+language=,           % choose the language of the code
+%numbers=left,           % where to put the line-numbers
+%numberstyle=\tiny,      % the size of the fonts that are used for the line-numbers
+basicstyle=\small\ttfamily,    % the size of the fonts that are used for the line-numbers, singlespaced lines
+columns=flexible,
+breaklines=true
+}
 
 \usepackage{titling}
 \renewcommand\maketitlehooka{\null\mbox{}\vfill}
 \renewcommand\maketitlehookd{\vfill\null}
+
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 
 \title{
 \normalfont \normalsize 
@@ -34,35 +51,41 @@
 \date{October 08, 2024}
 \author{Daniel Alemayehu, Eli Grundberg}
 
+
 \begin{document}
 \begin{titlingpage}
 \maketitle
 \end{titlingpage}
-
+\newpage
+\tableofcontents
 \newpage
 
 \section{Introduction}
 We interested in stocking a local suburban neighborhood pond with a species of trout such that people can enjoy finishing in said pond. 
-However, we want to prevent the pond from being overfished. 
+However, we want to prevent the pond from being overfished by the neighborhood.
 More specifically, we want to make sure there is always fish in the pond such that anyone who goes fishing has a nonzero chance of catching a fish. 
-To accomplish this, we'll analyze Rainbow, Brown, and Brook trouts to see which population allows for the most amount of trout to be harvested. 
+To accomplish this, we'll analyze Rainbow, Brown, and Brook trouts to see which population allows for the most amount of trout to be harvested from the lake.
 In other words, we'll maximize the rate of harvesting of trout.
 \section{Trout Population Model}
 In order to determine the best species of trout to stock the lake with we analyzed the following modified logistic population model below:
 \begin{equation} \label{eq:1}
     \dv{y}{t} = r\left(1 - \frac{y}{L}\right)y - h(y)
 \end{equation}
-This differential equation models the growth of the fish population in hundereds of fish per month. 
+This differential equation models the growth of the trout population in hundereds of trout per month. 
 \begin{itemize}
-    \item \(r\) is representative of our intrinsic growth rate of the fish population, as a unitless percent quantity representing how much the population grows by.
-    \item \(L\) is representative of the carrying capacity, or the maximum fish population, in units of hundreds of fish.
-    \item \(h(y)\) is the rate the people harvest trout from the pond as a function of hundreds of fish defined below as:
-\end{itemize}
+    \item \(r\) is representative of our intrinsic growth rate of the trout population, as a unitless quantity representing the proportion of how much the population grows by.
+    \item \(L\) is representative of the carrying capacity, or the maximum trout population, in units of hundreds of trout.
+    \item \(h(y)\) is the rate the people harvest hundreds of trout from the pond as a function of hundreds of trout defined below as:
 \begin{equation} \label{eq:2}
     h(y) = \frac{py^2}{q + y^2}
 \end{equation}
-Where \(p\) relates the number of people fishing and \(q\) relates the temperature of the water.
-This also implies Equation \eqref{eq:1} is an autonomous differential equation denoting that our logistic curve of our fish population exists independently of when we stock the lake with trout. 
+    \item When combining both the definition of \(h(y)\) and \(\displaystyle \dv{y}{t}\) the equation for \(\displaystyle \dv{y}{t}\) can be written below as:
+\begin{equation*}
+    \dv{y}{t} = r\left(1 - \frac{y}{L}\right)y - \frac{py^2}{q + y^2}
+\end{equation*}
+\end{itemize}
+In above Equation and in Equation \eqref{eq:2}, \(p\) relates the number of people fishing and \(q\) relates the temperature of the water.
+This also implies Equation \eqref{eq:1} is an autonomous differential equation denoting that our logistic curve of our trout population exists independently of when we stock the lake with trout. 
 More specifically, our model does not account for any seasonal effects or orther temporal effects that may influence the trout population or the rate of harvest.
 \section{Qualitative Analysis}
 \subsection{Trout Population Growth}
@@ -87,36 +110,37 @@ Below is the graph of the specific solution:
 \newline
 \begin{figure}[H]
     \centering
-    \includesvg{./figures/fig.3.2.1}
-    \caption{Trout Populations modelled by the Specific Solution, Code in Appendix}
+    \includesvg[inkscapelatex=false]{./figures/fig.3.2.1}
+    \caption{Trout Populations modelled by the Specific Solution, Code in Appendix \ref{appendix:A}}
     \label{fig:1}
 \end{figure}
-As expected on the graph the Trout species approch their respective carrying capacities as \(t \to \infty\) and when \(t \to 0\), \(y = y_0 = 1\).
-A better point of comparison is \(t = 6\) for 6 months.
-At \(t = 6\), the unharvested Rainbow species is expected to nearly reach it's carrying capacity where it's currently at 500 fish.
-Meanwhile at \(t = 6\), the Brown Trout is expected to reach a population of around 700 Trout.
-And for the Brook Trout, at \(t = 6\), it reaches a population of aroung 1250 fish.
-This point of comparison shows how quickly the Rainbow and Brown Trouts are going to reach their carrying capacities, in comparison to the Brook Trout.
+\noindent As expected, on the graph the Trout species approch their respective carrying capacities as \(t \to \infty\), and when \(t \to 0\) the fist population approaches \(y = y_0 = 1\).
+A better possible point of comparison is \(t = 6\) for 6 months.
+At \(t = 6\), the unharvested Rainbow species is expected to nearly reach it's carrying capacity where it's currently at 500 trout.
+Meanwhile at \(t = 6\), the Brown Trout is expected to reach a population of around 700 trout.
+And for the Brook Trout, at \(t = 6\), it reaches a population of aroung 1250 trout.
+This point of comparison shows how quickly the Rainbow and Brown Trouts are going to reach their carrying capacities, in comparison to the Brook Trout and how much more massively populate the Brook trouts could be in 6 months, in comparison to the Brown and Rainbow Trout.
 \subsection{Neighborhood Havesting}
 The next part of qualitative analysis is observing how the harvesting function, Equation \eqref{eq:2} changes in relation to the trout population and different constants for \(p\) and \(q\).
 To best visualize this we'll consider \(y \in [0,10]\) and varying values of \(p,q \in \{1, 1.5, 2\}\) as graphed below.
 \newline
 \begin{figure}[H]
     \centering
-    \includesvg{./figures/fig.3.3.1}
-    \caption{In our legend \(p\) and \(q\) are annoted as a tuple \((p,q)\), Code in Appendix}
+    \includesvg[inkscapelatex=false]{./figures/fig.3.3.1}
+    \caption{In our legend \(p\) and \(q\) are annoted as a tuple \((p,q)\), Code in Appendix \ref{appendix:B}}
     \label{fig:2}
 \end{figure}
-From Figure \eqref{fig:2} we can derive two important behaviors about the rate of trout harvest.
+From Figure \ref{fig:2} we can derive two important behaviors about the rate of trout harvest.
 \begin{enumerate}
-    \item As Trout populations approach 0 no havesting can occur.
-    \item As Trout populations approach large numbers, the rate of harvesting is limited by the number of people.
+    \item As trout populations approach 0 no havesting can occur.
+    \item As trout populations approach large numbers, the rate of harvesting is limited by the number of people.
 \end{enumerate}
-Analytically, if we observe the limit of the harvesting function as \(y\to 0\) and \(y\to \infty\) this confirms our two observations from our graph (See Appendix ? for specific calculations). 
-Physically, this would also appear to make sense considering that if there were no fish left to harvest then the rate of harvest would be 0. 
-If there was a very large population of fish, the amount of fish harvested would depend on how many people are harvesting since people can only harvest a finite amount of fish from a very large Trout population at a given time.
+Analytically, if we observe the limit of the harvesting function, Equation \eqref{eq:2}, as \(y\to 0\) and \(y\to \infty\) this confirms our two observations from our graph. 
+Physically, this would also appear to make sense considering that if there were no trout left to harvest then the rate of harvest would be 0. 
+If there was a very large population of trout, the amount of trout harvested would depend on how many people are harvesting since people can only harvest a finite amount of trout from a very large trout population at a given time.
+Even if a greater temperature decreases the likelyhood of the trout biting, the very large trout population makes this effect minute since it's far more likely any of the trout in the population bite the larger the population is.
 \subsection{Population Stability}
-The final part to the qualitative analysis is to analyze the equilibrium solutions of Equation \eqref{eq:1}. The "equilibrium solutions" will help identify \(y\) values for which the population of trout tends towards or is tenously balanced at. We'll graph \(\d{y}{t} = f(y)\) for the following conditions:
+The final part to the qualitative analysis is to analyze the equilibrium solutions of Equation \eqref{eq:1}. The ``''equilibrium solutions'' will help identify \(y\) values for which the population of trout tends towards or is tenously balanced at. We'll graph \(\d{y}{t} = f(y)\) for the following conditions:
 \begin{itemize}
     \item \(y \in [0, 15]\)
     \item \(p = 1.2\)
@@ -128,11 +152,11 @@ The final part to the qualitative analysis is to analyze the equilibrium solutio
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includesvg{./figures/fig.3.4.1}
-    \caption{Code in Appendix}
+    \includesvg[inkscapelatex=false]{./figures/fig.3.4.1}
+    \caption{Code in Appendix \ref{appendix:C}}
     \label{fig:3}
 \end{figure}
-The roots are a little bit difficult to precisely identify at a first glance on the graph so we can also apply rootfinding algorithms (code in Appendix) to identify the roots of the above function more closely. 
+The roots are a little bit difficult to precisely identify at a first glance on the graph so we can also apply root-finding algorithms\footnote{refer to Appendix \ref{appendix:C} for our specific root finding algorithm} to identify the roots of the above function more closely. 
 The graphs are still helpful because the root finding algorithms can only find a single root so specifiying a range where the root occurs helps to identify the root we're interested in.
 The roots for each curve are approximated below:
 \begin{itemize}
@@ -140,26 +164,33 @@ The roots for each curve are approximated below:
     \item For Brown Trout: \(f(y) = 0\) for \(y \in \{0, 0.8018, 1.8564, 5.4418\}\).
     \item For Brook Trout: \(f(y) = 0\) for \(y \in \{0, 14.1898\}\).
 \end{itemize}
-The significance of the roots is that they denote equilibrium solutions, where the rate of change in the Trout population is 0.
-Another tool we can use to identify equilibrium solutions is the direction field, which will help visualize the curve of the Trout Population function and the stability of the equilibrium solutions.
-Direction fields for each Trout species are modelled below:
+The significance of the roots is that they denote equilibrium solutions, where the rate of change in the trout population is 0.
+Thus these roots showcase for which values of the trout population does the trout Population stop growing or shrinking.
+Another tool we can use to identify equilibrium solutions is the direction field, which will help visualize the curve of the trout population function and the stability of the equilibrium solutions.
+Direction fields for each trout species are modelled below:
 \begin{figure}[H]
+    \begin{adjustwidth}{-1in}{-1in}
     \centering
-    \includesvg{./figures/fig.3.4.4}
-    \caption{Code in Appendix}
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{./figures/fig.3.4.4}
+        \label{fig:4a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{./figures/fig.3.4.2}
+        \label{fig:4b}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{./figures/fig.3.4.3}
+        \label{fig:4c}
+    \end{subfigure}
+    \caption{Code in Appendix \ref{appendix:C}}
     \label{fig:4}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includesvg{./figures/fig.3.4.2}
-    \caption{Code in Appendix}
-    \label{fig:5}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includesvg{./figures/fig.3.4.3}
-    \caption{Code in Appendix}
-    \label{fig:6}
+    \end{adjustwidth}
 \end{figure}
 Some interesting things to note above:
 \begin{itemize}
@@ -173,11 +204,11 @@ Some interesting things to note above:
         \end{itemize}
     \item The Rainbow Trout has only one stable equilibrium and it's at a small value for the population.
     \item The Brook Trout nearly approaches a solution at \(y = 1\) but doesn't actually have one at that point.
-    \item No Trout Species can ever go extinct because for all \(y > 0\) the solution tends towards a positive equilibrium state.
+    \item No Trout species can ever go extinct because for all \(y > 0\) the solution tends towards a positive equilibrium state.
     \item The Brook Trout population always approaches it's maximal stable equilibrium given that \(y > 0\).
 \end{itemize}
 \section{Numerical Analysis} 
-To get a better grasp of the Trout Population in relation to harvesting by the neighborhood, we can also apply Euler's method to approximate the fish population at a given time. 
+To get a better grasp of the Trout Population in relation to harvesting by the neighborhood, we can also apply Euler's method to approximate the trout population at a given time. 
 We'll utilize Equation \eqref{eq:1} to identify our slope for Euler's Method with the following conditions as well:
 \begin{itemize}
     \item \(p = 1.2\)
@@ -191,28 +222,34 @@ We'll utilize Equation \eqref{eq:1} to identify our slope for Euler's Method wit
     \item We'll test \(y(0) \in \{0.5,1,2,20\}\) respectively on new plots for different inital conditions.
 \end{itemize}
 \begin{figure}[H]
+    \begin{adjustwidth}{-1in}{-1in}
     \centering
-    \includesvg{./figures/fig.4.1.1}
-    \caption{Code in Appendix}
-    \label{fig:7}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includesvg{./figures/fig.4.1.2}
-    \caption{Code in Appendix}
-    \label{fig:8}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includesvg{./figures/fig.4.1.3}
-    \caption{Code in Appendix}
-    \label{fig:9}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includesvg{./figures/fig.4.1.4}
-    \caption{Code in Appendix}
-    \label{fig:10}
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{./figures/fig.4.1.1}
+        \label{fig:5a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{./figures/fig.4.1.2}
+        \label{fig:5b}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{./figures/fig.4.1.3}
+        \label{fig:5c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{./figures/fig.4.1.4}
+        \label{fig:5d}
+    \end{subfigure}
+    \caption{Code in Appendix \ref{appendix:D}}
+    \label{fig:5}
+    \end{adjustwidth}
 \end{figure}
 \begin{itemize}
     \item For the Rainbow Trout, all tested inital conditions result in the Trout species nearly dying out.
@@ -220,17 +257,332 @@ We'll utilize Equation \eqref{eq:1} to identify our slope for Euler's Method wit
     \item For the Brook Trout, all test inital conditions proved irrelevant to the trout species eventually reaching it's population capacity given the harvest rate
 \end{itemize}
 \section{Conclusion}
-In conclusion, we can choose a species to stock the lake given a variety of conditions.
-\begin{itemize}
-    \item If we want to stock the lake while staring with the fewest fish possible we should choose the Brook Trout since their species can accomidate the most harvesting because their species usually reaches near their carrying capacity.
-    \item Either way for any species we won't overfish the lake so choosing based on that criterion is largely irrelevant.
-\end{itemize}
-But our model doesn't account for a critical array of information. 
-For starters, we'll likely need to stock the lake with prey for the fish as well so they don't die out while being fished and that may effect how much of the Trout can reside in the lake.
-We also don't take into account any season or other temportal related effects into our model when stocking the lake.
-Stocking the lake in winter may prove detrimental to the fish population while stocking during spring mating season will allow for the fish population to grow much faster.
-Finally, it would also be worthwhile to consider stocking the lake with a mixture of Trout species if they are not predators of each other.
-Having variety in the lake will make fishing a lot more fun, especially with smaller populations like the Rainbow Trout fitting well into a fabled catch archetype for the neighborhood.
-\section{Appendix}
-MFW filling appendix :(
+In conclusion, we should choose the Brook Trout since their species can accomidate the most harvesting because their species always reaches near their carrying capacity, the highest amongst all the Trout Species.
+Another big advantage of the Brook Trout is that we can initally stock the lake with a small number of them in the lake and can be assured by our models that the Brook Trout will always reach is maximum population under harvesting, while other trout whose populations settle at their lower stable equilibrium if the inital population is sufficiently small.
+However, the trout aren't at risk of being fished out due to the lack of harvesting at low trout populations so any trout population will satisfy our inital criterion to the dismay of the neighborhood who may want more trout to catch.
+Although, our model doesn't account for a critical array of information that may influence which species to stock the lake with. 
+The biggest issue is that the model doesn't take into account any seasonal or other temportal related effects into our model when stocking the lake.
+Stocking the lake in winter may prove detrimental to the trout population while stocking during spring mating season will allow for the trout population to grow much faster.
+Temperature and the amount of people fishing varies from season to season and month to month as well.
+Additionally, it would also be worthwhile to consider stocking the lake with a mixture of trout species if they are not predators of each other.
+Having variety in the lake will make fishing a lot more fun, especially with smaller populations like the Rainbow Trout that can serve as a rare trophy catch for would be fishermen in the neighborhood.
+\pagebreak
+\begin{appendices}
+\section{Figure \ref{fig:1} Code} \label{appendix:A}
+The following code is in MATLAB syntax:
+\begin{spacing}{1}
+\begin{lstlisting}
+function y = logistic_curve(L, y_0, r, t)
+    y = L ./ (1 + (L/y_0 - 1)*exp((-r*t)));
+end
+
+%Conditions
+%Rainbow, Brown, Brook (in hundreds of trout)
+capacity = [5.4 8.1 16.3];
+
+t_space = linspace(0, 15, 200);
+ics_y = 1; %in hundreds
+growth_rate = 0.65;
+
+y_space = [];
+
+for i = 1:3
+    new_y = logistic_curve(capacity(i), ics_y, growth_rate, t_space);
+    y_space = [y_space; new_y];
+end
+
+plot(t_space, y_space);
+
+title('Logistic Growth of Trout Species');
+xlabel('Time (months)');
+ylabel('Population (in hundreds)');
+legend('Rainbow Trout', 'Brown Trout', 'Brook Trout'); 
+\end{lstlisting}
+\end{spacing}
+\newpage
+\section{Figure \ref{fig:2} Code} \label{appendix:B}
+The following code is in MATLAB syntax:
+\begin{spacing}{1}
+\begin{lstlisting}
+function f = harvest_function(y, p, q)
+    numerator = p*y.^2;
+    denominator = q + y.^2;
+    %f = (p*y.^2)./(q + y.^2);
+    f = numerator./denominator;
+end
+
+% Conditions
+
+% Consider the cartesian product of the two sets of p and q
+p_space = [1 1.5 2];
+q_space = [1 1.5 2];
+% Thus we have our ordered pairs of curve constants
+[P,Q] = meshgrid(p_space,q_space);
+% Number of ordered pairs
+paring_count = numel([P(:)]);
+% Y Range
+y_space = linspace(0,10,200);
+
+% harvesting function output
+result_space = [];
+for i = 1:paring_count
+    h_y = harvest_function(y_space, P(i), Q(i));
+    result_space = [result_space; h_y];
+end
+
+plot(y_space, result_space);
+
+legend_space = [];
+for i = 1:paring_count
+    name = sprintf("(%.1f, %.1f)", P(i), Q(i));
+    legend_space = [legend_space name];
+end
+
+legend(legend_space);
+title('Rate of Trout Harvesting');
+xlabel('Fish Population (in hundreds)');
+ylabel('Harvest Rate (hundreds of trout per month)');
+
+mycolors = ["#f0f921"; "#fdc527"; "#f89540"; "#e66c5c"; "#cc4778"; "#aa2395"; "#7e03a8"; "#4c02a1"; "#0d0887"];
+colororder(mycolors);
+\end{lstlisting}
+\end{spacing}
+\newpage
+\section{Figure \ref{fig:3} and Figure \ref{fig:4} Code} \label{appendix:C}
+The following code is in MATLAB syntax:
+\begin{spacing}{1}
+\begin{lstlisting}
+%% b.)
+
+%% (i) f(y) plots for each trout type at limiting value
+
+%eq_3 => f(y) = r(1-y/L)y - (py^2)/(q+y^2)
+%eq_1 = r*(1-y/l)*y-(h_y);
+%eq_2 = (py^2)/(q+y^2)
+% parameters representing how well locals catch trout
+p = 1.2;
+q = 1;
+% r = intrinsic growth rate
+r = 0.65;
+% L = carrying capacity
+browntroutL = 8.1;
+brooktroutL = 16.3;
+rainbowtroutL = 5.4;
+
+%interval for which f(y) is calculated 
+y = (0:15);
+
+%dy = r*(1-(y./L))*y - (p*y.^2)/(q+y.^2);
+%y' for the brown trout at limiting value
+dy_browntrout = @(y) r*(1 - (y / browntroutL)).*y - (p.*(y.^2))/(q + y.^2);
+
+%y' for the brook trout at limiting value
+dy_brooktrout =  @(y) r*(1 - (y / brooktroutL)).*y - (p.*(y.^2))/(q + y.^2);
+
+%y' for the rainbow trout at limiting value
+dy_rainbowtrout =  @(y) r*(1 - (y / rainbowtroutL)).*y - (p.*(y.^2))/(q + y.^2);
+
+
+figure();
+hold on;
+%plots f(y) as a function of y for each trout type with limiting capacity
+fplot(dy_browntrout, [0 15]);
+fplot(dy_brooktrout, [0 15]);
+fplot(dy_rainbowtrout, [0 15]);
+
+title('Trout Population Growth Rate vs Trout Population')
+xlabel('Trout Population (in hundreds)');
+ylabel('Rate of Trout Population Growth (hundreds per month)')
+legend('Brown Trout',  'Brook Trout', 'Rainbow Trout', 'location', 'southwest');
+ylim([-0.2 0.2]);
+
+hold off;
+%{
+Based on the graph of f(y) for each of the trout, the equilibrium
+solutions can be found in the intervals as follows. 
+The 4 brown trout equilibrium solutions can be found at 0, in between 0.5-1, 1.5-4, and
+4.5-15.
+The 2 brook trout equilibrium solutions can be found at 0, and between 14-15
+The 2 rainbow trout equilibrium solutions can be found at 0 and between 0.5-1
+%}
+
+%% (ii) Equilibrium Solutions
+
+%Finds equilibrium solutions for brown trout in each of the intervals where they occur
+fun_BNT = @(y) r.*(1-(y/browntroutL)).*y - (p.*y.^2)/(q+y.^2);
+equil_solns_BNT = [];
+equil_solns_BNT(1) = fzero(fun_BNT, [0 1]);
+equil_solns_BNT(2) = fzero(fun_BNT, [0.5 1]);
+equil_solns_BNT(3) = fzero(fun_BNT, [1.5 4]);
+equil_solns_BNT(4) = fzero(fun_BNT, [4.5 15]);
+
+
+%Finds equilibrium solutions for brook trout in each of the intervals where they occur
+fun_BKT = @(y) r.*(1-(y./brooktroutL)).*y - (p.*y.^2)/(q+y.^2);
+equil_solns_BKT = [];
+equil_solns_BKT(1) = fzero(fun_BKT, 0);
+equil_solns_BKT(2) = fzero(fun_BKT, [1 15]);
+
+%Finds equilibrium solutions for rainbow trout in each of the intervals where they occur
+fun_RT = @(y) r.*(1-(y./rainbowtroutL)).*y - (p.*y.^2)/(q+y.^2);
+equil_solns_RT = [];
+equil_solns_RT(1) = fzero(fun_RT, 0);
+equil_solns_RT(2) = fzero(fun_RT, [.5 3]);
+
+
+%% (iii) Direction Fields
+
+%eq_1 = r*(1-y/l)*y-(h_y);
+%eq_2 = (py^2)/(q+y^2)
+
+%Direction field of eq 1 and 2 for the brown trout
+f_BNT = @(t,y) 0.65*(1-y/8.1)*y - (1.2*y^2)/(1+y^2);
+
+%Direction field of eq 1 and 2 for the brook trout
+f_BKT = @(t,y) 0.65*(1-y/16.3)*y - (1.2*y^2)/(1+y^2);
+
+%Direction field of eq 1 and 2 for rainbow trout
+f_RT = @(t,y) 0.65*(1-y/5.4)*y - (1.2*y^2)/(1+y^2);
+
+%Direction field for Brown Trout with equilibrium solutions
+figure();
+dirfield(f_BNT, 0:1.5:60, -5:0.5:20, equil_solns_BNT);
+title('Brown Trout Direction Field w/ Equil. Solns');
+%Direction field for Brook Trout with equilibrium solutions
+figure();
+dirfield(f_BKT, 0:1.5:60, -5:0.5:20, equil_solns_BKT);
+title('Brook Trout Direction Field w/ Equil. Solns');
+%Direction field for Rainbow Trout with equilibrium solutions
+figure();
+dirfield(f_RT, 0:1.5:60, -5:0.5:20, equil_solns_RT);
+title('Rainbow Trout Direction Field w/ Equil. Solns');
+
+
+%% Function Def'n
+function dirfield(f,tval,yval,x)
+[tm,ym] = meshgrid(tval,yval);
+dt = tval(2) - tval(1);
+dy = yval(2) - yval(1);
+fv = vectorize(f);
+if isa(f,'function_handle')
+fv = eval(fv);
+end
+yp = feval(fv,tm,ym);
+s = 1./max(1/dt,abs(yp)./dy)*0.35;
+h = ishold;
+quiver(tval,yval,s,s.*yp,0,'.r'); hold on;
+quiver(tval,yval,-s,-s.*yp,0,'.r');
+if h
+hold on
+else
+hold off
+end
+axis([tval(1)-dt/2,tval(end)+dt/2,yval(1)-dy/2,yval(end)+dy/2])
+xlabel('Time (months)');
+ylabel('Trout Population (in hundreds)');
+yline(x, 'k', 'LineWidth', 1.2);
+end
+\end{lstlisting}
+\end{spacing}
+\newpage
+\section{Figure \ref{fig:5} Code} \label{appendix:D}
+The following code is in MATLAB syntax:
+\begin{spacing}{1}
+\begin{lstlisting}
+% Our Differential Equation, p=1.2 and q=1
+function f = dy(y, L)
+   f = 0.65*(1 - y/L)*y - (1.2*y^2)/(1 + y^2);
+end
+
+% Generates the Euler Sequence from y_0 to y_n
+function f = y_n(y_0, term_count, h, L)
+    f = [y_0];
+    yn = y_0;
+    for i = 1:term_count
+        yn =  yn + h*dy(yn,L);
+        f = [f yn];
+    end
+end
+
+% Constants
+
+% Euler Step-Size
+h = 0.01;
+% Carrying capacities
+L = [5.4 8.1 16.3];
+% Inital Fish Populations
+y_0 = [0.5, 1, 2, 20];
+
+% number of terms in the Euler sequence
+count = 80/h;
+
+% domain of interest (parameterized by t months)
+t_space = linspace(0, 80, 80/h + 1); 
+
+% species array
+species = ["Rainbow Trout"; "Brown Trout"; "Brook Trout"];
+
+figure(1)
+% Fish population at given t
+y_space = [];
+legend_space = [];
+for i = 1:3
+    y_space = [y_space; y_n(y_0(1), count, h, L(i))];
+    legend_space = [legend_space; sprintf("%s: L = %.1f", species(i), L(i))];
+end
+plot(t_space, y_space);
+title(sprintf("Euler Apprxoimation of Fish Population when y_0 = %.1f", y_0(1)));
+xlabel('Time (months)');
+ylabel('Fish Population (in hundreds)');
+legend(legend_space);
+grid
+
+
+figure(2)
+% Fish population at given t
+y_space = [];
+legend_space = [];
+for i = 1:3
+    y_space = [y_space; y_n(y_0(2), count, h, L(i))];
+    legend_space = [legend_space; sprintf("%s: L = %.1f", species(i), L(i))];
+end
+plot(t_space, y_space);
+legend(legend_space);
+title(sprintf("Euler Apprxoimation of Fish Population when y_0 = %.1f", y_0(2)));
+xlabel('Time (months)');
+ylabel('Fish Population (in hundreds)');
+grid
+
+figure(3)
+% Fish population at given t
+y_space = [];
+legend_space = [];
+for i = 1:3
+    y_space = [y_space; y_n(y_0(3), count, h, L(i))];
+    legend_space = [legend_space; sprintf("%s: L = %.1f", species(i), L(i))];
+end
+plot(t_space, y_space);
+legend(legend_space);
+title(sprintf("Euler Apprxoimation of Fish Population when y_0 = %.1f", y_0(3)));
+xlabel('Time (months)');
+ylabel('Fish Population (in hundreds)');
+grid
+
+figure(4)
+% Fish population at given t
+y_space = [];
+legend_space = [];
+for i = 1:3
+    y_space = [y_space; y_n(y_0(4), count, h, L(i))];
+    legend_space = [legend_space; sprintf("%s: L = %.1f", species(i), L(i))];
+end
+plot(t_space, y_space);
+legend(legend_space);
+title(sprintf("Euler Apprxoimation of Fish Population when y_0 = %.1f", y_0(4)));
+xlabel('Time (months)');
+ylabel('Fish Population (in hundreds)');
+grid
+\end{lstlisting} 
+\end{spacing}
+\end{appendices}
 \end{document}

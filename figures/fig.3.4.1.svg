@@ -165,29 +165,29 @@
       /><path d="M73 202.5 L73.2829 197.1593 L73.5657 192.035 L73.8485 187.1266 L74.1314 182.4335 L74.4142 177.955 L74.6971 173.6902 L74.9799 169.6376 L75.2628 165.7961 L75.5456 162.1638 L75.8285 158.7389 L76.1113 155.5194 L76.3942 152.5031 L76.677 149.6874 L76.9599 147.0698 L77.2427 144.6475 L77.5256 142.4176 L77.8084 140.3768 L78.0913 138.522 L78.3741 136.8497 L78.657 135.3564 L78.9398 134.0385 L79.2227 132.892 L79.5055 131.9131 L79.7884 131.0979 L79.9298 130.7504 L80.0712 130.4422 L80.2127 130.1729 L80.3541 129.9419 L80.4248 129.8406 L80.4955 129.7487 L80.5662 129.6661 L80.6369 129.5927 L80.7076 129.5285 L80.7784 129.4735 L80.8137 129.4493 L80.8491 129.4274 L80.8844 129.4078 L80.9198 129.3904 L80.9551 129.3752 L80.9905 129.3622 L81.0258 129.3515 L81.0612 129.3429 L81.0966 129.3366 L81.1319 129.3324 L81.1673 129.3304 L81.2026 129.3305 L81.238 129.3328 L81.2733 129.3373 L81.3087 129.3439 L81.3441 129.3527 L81.3794 129.3635 L81.4148 129.3765 L81.4501 129.3916 L81.4855 129.4088 L81.5208 129.428 L81.5562 129.4494 L81.6269 129.4983 L81.6976 129.5554 L81.7683 129.6206 L81.839 129.694 L81.9098 129.7753 L81.9805 129.8646 L82.0512 129.9617 L82.218 130.2216 L82.3848 130.524 L82.5516 130.8679 L82.7184 131.2525 L83.0521 132.1397 L83.3857 133.1785 L84.0529 135.6811 L84.7202 138.7025 L85.3875 142.1862 L86.0547 146.0772 L86.722 150.3225 L87.3892 154.8715 L88.7237 164.6907 L90.0583 175.1825 L92.7273 197.0065 L95.309 217.7644 L97.8907 237.0391 L100.4725 254.1925 L103.0542 268.948 L105.4043 280.2708 L107.7544 289.6868 L110.1045 297.3676 L112.4545 303.5241 L113.6643 306.1731 L114.874 308.5101 L116.0837 310.5665 L117.2935 312.3731 L118.5032 313.9601 L119.7129 315.3567 L120.9227 316.5911 L122.1324 317.6904 L123.3886 318.7167 L124.6448 319.653 L127.1571 321.36 L129.6695 323.006 L132.1818 324.7654 L133.5423 325.821 L134.9027 326.9779 L136.2631 328.2572 L137.6236 329.6786 L138.984 331.2603 L140.3444 333.0198 L141.7049 334.973 L143.0653 337.135 L145.2762 341.13 L147.4872 345.7688 L149.6981 351.1014 L151.9091 357.1724 L156.9089 374.0409" style="fill:none; fill-rule:evenodd; stroke:rgb(237,177,32);"
     /></g
     ><g style="fill:white; text-rendering:optimizeSpeed; color-rendering:optimizeSpeed; image-rendering:optimizeSpeed; shape-rendering:crispEdges; stroke:white; color-interpolation:sRGB;"
-    ><path style="stroke:none;" d="M223 363 L223 310 L84 310 L84 363 Z"
+    ><path style="stroke:none;" d="M474 362 L474 309 L335 309 L335 362 Z"
     /></g
-    ><g transform="translate(131,320)" style="text-rendering:geometricPrecision; font-family:'SansSerif'; color-interpolation:linearRGB; color-rendering:optimizeQuality; image-rendering:optimizeQuality;"
+    ><g transform="translate(382,319)" style="text-rendering:geometricPrecision; font-family:'SansSerif'; color-interpolation:linearRGB; color-rendering:optimizeQuality; image-rendering:optimizeQuality;"
     ><text x="0" xml:space="preserve" y="5" style="stroke:none;"
       >Brown Trout</text
     ></g
     ><g style="stroke-linecap:butt; fill:rgb(0,114,189); text-rendering:geometricPrecision; image-rendering:optimizeQuality; color-rendering:optimizeQuality; stroke-linejoin:round; stroke:rgb(0,114,189); color-interpolation:linearRGB; stroke-width:0.6667;"
-    ><line y2="320" style="fill:none;" x1="88" x2="128" y1="320"
+    ><line y2="319" style="fill:none;" x1="339" x2="379" y1="319"
     /></g
-    ><g transform="translate(131,336.5)" style="text-rendering:geometricPrecision; font-family:'SansSerif'; color-interpolation:linearRGB; color-rendering:optimizeQuality; image-rendering:optimizeQuality;"
+    ><g transform="translate(382,335.5)" style="text-rendering:geometricPrecision; font-family:'SansSerif'; color-interpolation:linearRGB; color-rendering:optimizeQuality; image-rendering:optimizeQuality;"
     ><text x="0" xml:space="preserve" y="5" style="stroke:none;"
       >Brook Trout</text
     ></g
     ><g style="stroke-linecap:butt; fill:rgb(217,83,25); text-rendering:geometricPrecision; image-rendering:optimizeQuality; color-rendering:optimizeQuality; stroke-linejoin:round; stroke:rgb(217,83,25); color-interpolation:linearRGB; stroke-width:0.6667;"
-    ><line y2="336.5" style="fill:none;" x1="88" x2="128" y1="336.5"
+    ><line y2="335.5" style="fill:none;" x1="339" x2="379" y1="335.5"
     /></g
-    ><g transform="translate(131,353)" style="text-rendering:geometricPrecision; font-family:'SansSerif'; color-interpolation:linearRGB; color-rendering:optimizeQuality; image-rendering:optimizeQuality;"
+    ><g transform="translate(382,352)" style="text-rendering:geometricPrecision; font-family:'SansSerif'; color-interpolation:linearRGB; color-rendering:optimizeQuality; image-rendering:optimizeQuality;"
     ><text x="0" xml:space="preserve" y="5" style="stroke:none;"
       >Rainbow Trout</text
     ></g
     ><g style="stroke-linecap:butt; fill:rgb(237,177,32); text-rendering:geometricPrecision; image-rendering:optimizeQuality; color-rendering:optimizeQuality; stroke-linejoin:round; stroke:rgb(237,177,32); color-interpolation:linearRGB; stroke-width:0.6667;"
-    ><line y2="353" style="fill:none;" x1="88" x2="128" y1="353"
-      /><path d="M84 363 L84 310 L223 310 L223 363 Z" style="fill:none; fill-rule:evenodd; stroke:rgb(38,38,38); stroke-linejoin:miter;"
+    ><line y2="352" style="fill:none;" x1="339" x2="379" y1="352"
+      /><path d="M335 362 L335 309 L474 309 L474 362 Z" style="fill:none; fill-rule:evenodd; stroke:rgb(38,38,38); stroke-linejoin:miter;"
     /></g
   ></g
 ></svg

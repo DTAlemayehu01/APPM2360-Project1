@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{420bp}%
+    \setlength{\unitlength}{423bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,27 +50,27 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.75)%
+  \begin{picture}(1,0.75177305)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{fig.3.4.2_svg-tex.pdf}}%
-    \put(0.13177268,0.04761911){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.25064607,0.04761911){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
-    \put(0.37666232,0.04761911){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}20\end{tabular}}}}%
-    \put(0.50267857,0.04761911){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}30\end{tabular}}}}%
-    \put(0.62869482,0.04761911){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}40\end{tabular}}}}%
-    \put(0.75471107,0.04761911){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}50\end{tabular}}}}%
-    \put(0.88072732,0.04761911){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}60\end{tabular}}}}%
-    \put(0.41964321,0.01309518){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Time (months)\end{tabular}}}}%
+    \put(0.13793032,0.05437358){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.25596064,0.05437358){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.38108316,0.05437358){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}20\end{tabular}}}}%
+    \put(0.50620567,0.05437358){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}30\end{tabular}}}}%
+    \put(0.63132819,0.05437358){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}40\end{tabular}}}}%
+    \put(0.75645071,0.05437358){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}50\end{tabular}}}}%
+    \put(0.88157323,0.05437358){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}60\end{tabular}}}}%
+    \put(0.42375922,0.0200945){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Time (months)\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{fig.3.4.2_svg-tex.pdf}}%
-    \put(0.09404768,0.07832625){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-5\end{tabular}}}}%
-    \put(0.10476196,0.19842429){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.10476196,0.31852232){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5\end{tabular}}}}%
-    \put(0.09047625,0.43862054){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
-    \put(0.09047625,0.55871857){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}15\end{tabular}}}}%
-    \put(0.09047625,0.67881661){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}20\end{tabular}}}}%
-    \put(0.07619054,0.18571464){\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Trout Population (in hundreds)\end{tabular}}}}}%
-    \put(0.19821482,0.70669643){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Brown Trout Direction Field w/ Equil. Solns}\end{tabular}}}}%
+    \put(0.10047287,0.08486294){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-5\end{tabular}}}}%
+    \put(0.11111117,0.20410922){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.11111117,0.3233555){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5\end{tabular}}}}%
+    \put(0.09692677,0.44260195){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.09692677,0.56184823){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}15\end{tabular}}}}%
+    \put(0.09692677,0.6810945){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}20\end{tabular}}}}%
+    \put(0.08274238,0.19148972){\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Trout Population (in hundreds)\end{tabular}}}}}%
+    \put(0.20390124,0.7087766){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Brown Trout Direction Field w/ Equil. Solns}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{fig.3.4.2_svg-tex.pdf}}%
   \end{picture}%
 \endgroup%
