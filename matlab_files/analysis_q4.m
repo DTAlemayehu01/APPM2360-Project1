@@ -44,6 +44,7 @@ title('Trout Population Growth Rate vs Trout Population')
 xlabel('Trout Population (in hundreds)');
 ylabel('Rate of Trout Population Growth (hundreds per month)')
 legend('Brown Trout',  'Brook Trout', 'Rainbow Trout', 'location', 'southwest');
+ylim([-0.2 0.2]);
 
 hold off;
 %{
