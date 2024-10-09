@@ -63,28 +63,28 @@ breaklines=true
 \section{Introduction}
 We interested in stocking a local suburban neighborhood pond with a species of trout such that people can enjoy finishing in said pond. 
 However, we want to prevent the pond from being overfished by the neighborhood.
-More specifically, we want to make sure there is always fish in the pond such that anyone who goes fishing has a nonzero chance of catching a fish. 
-To accomplish this, we'll analyze Rainbow, Brown, and Brook trouts to see which population allows for the most amount of trout to be harvested from the lake.
+More specifically, we want to make sure there are always fish in the pond such that anyone who goes fishing has a nonzero chance of catching a fish. 
+To accomplish this, we'll analyze Rainbow, Brown, and Brook trout to see which population allows for the most amount of trout to be harvested from the lake.
 In other words, we'll maximize the rate of harvesting of trout.
 \section{Trout Population Model}
-In order to determine the best species of trout to stock the lake with we analyzed the following modified logistic population model below:
+To determine the best species of trout to stock the lake with, we analyzed the following modified logistic population model below:
 \begin{equation} \label{eq:1}
     \dv{y}{t} = r\left(1 - \frac{y}{L}\right)y - h(y)
 \end{equation}
-This differential equation models the growth of the trout population in hundereds of trout per month. 
+This differential equation models the growth of the trout population in hundreds of trout per month. 
 \begin{itemize}
-    \item \(r\) is representative of our intrinsic growth rate of the trout population, as a unitless quantity representing the proportion of how much the population grows by.
+    \item \(r\) is representative of our intrinsic growth rate of the trout population as a unitless quantity, representing the proportion of how much the population grows by.
     \item \(L\) is representative of the carrying capacity, or the maximum trout population, in units of hundreds of trout.
     \item \(h(y)\) is the rate the people harvest hundreds of trout from the pond as a function of hundreds of trout defined below as:
 \begin{equation} \label{eq:2}
     h(y) = \frac{py^2}{q + y^2}
 \end{equation}
-    \item When combining both the definition of \(h(y)\) and \(\displaystyle \dv{y}{t}\) the equation for \(\displaystyle \dv{y}{t}\) can be written below as:
+    \item When combining both the definition of \(h(y)\) and \(\displaystyle \dv{y}{t}\), the equation for \(\displaystyle \dv{y}{t}\) can be written below as:
 \begin{equation*}
     \dv{y}{t} = r\left(1 - \frac{y}{L}\right)y - \frac{py^2}{q + y^2}
 \end{equation*}
 \end{itemize}
-In above Equation and in Equation \eqref{eq:2}, \(p\) relates the number of people fishing and \(q\) relates the temperature of the water.
+In the above Equation and in Equation \eqref{eq:2}, \(p\) relates the number of people fishing and \(q\) relates the temperature of the water.
 This also implies Equation \eqref{eq:1} is an autonomous differential equation denoting that our logistic curve of our trout population exists independently of when we stock the lake with trout. 
 More specifically, our model does not account for any seasonal effects or orther temporal effects that may influence the trout population or the rate of harvest.
 \section{Qualitative Analysis}
