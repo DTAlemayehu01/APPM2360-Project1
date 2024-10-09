@@ -64,7 +64,7 @@ breaklines=true
 We are interested in stocking a local suburban neighborhood pond with a species of trout such that people can enjoy finishing in said pond. 
 However, we want to prevent the pond from being overfished by the neighborhood.
 More specifically, we want to make sure there are always fish in the pond such that anyone who goes fishing has a nonzero chance of catching a fish. 
-To accomplish this, we'll analyze Rainbow, Brown, and Brook trout to see which population allows for the most amount of trout to be harvested from the lake.
+To accomplish this, we'll analyze rainbow, brown, and brook trout to see which population allows for the most amount of trout to be harvested from the lake.
 In other words, we'll maximize the rate of harvesting of trout.
 \section{Trout Population Model}
 To determine the best species of trout to stock the lake with, we analyzed the following modified logistic population model below:
@@ -75,7 +75,7 @@ This differential equation models the growth of the trout population in hundreds
 \begin{itemize}
     \item \(r\) is representative of our intrinsic growth rate of the trout population as a unitless quantity, representing the proportion of how much the population grows by.
     \item \(L\) is representative of the carrying capacity, or the maximum trout population, in units of hundreds of trout.
-    \item \(h(y)\) is the rate the people harvest hundreds of trout from the pond as a function of hundreds of trout defined below as:
+    \item \(h(y)\) is the rate at which people harvest trout from the pond (hundreds) as a function of trout population (hundreds) defined below as:
 \begin{equation} \label{eq:2}
     h(y) = \frac{py^2}{q + y^2}
 \end{equation}
@@ -85,8 +85,8 @@ This differential equation models the growth of the trout population in hundreds
 \end{equation*}
 \end{itemize}
 In the above Equation and in Equation \eqref{eq:2}, \(p\) relates the number of people fishing and \(q\) relates the temperature of the water.
-This also implies Equation \eqref{eq:1} is an autonomous differential equation denoting that our logistic curve of our trout population exists independently of when we stock the lake with trout. 
-More specifically, our model does not account for any seasonal effects or orther temporal effects that may influence the trout population or the rate of harvest.
+This also implies Equation \eqref{eq:1} is an autonomous differential equation, denoting that our logistic curve of our trout population exists independently of when we stock the lake with trout. 
+More specifically, our model does not account for any seasonal effects or other temporal effects that may influence the trout population or the rate of harvest.
 \section{Qualitative Analysis}
 \subsection{Trout Population Growth}
 To begin the qualitative anaylsis of the model we'll consider the logistic growth section of Equation \eqref{eq:1} defined as:
@@ -102,9 +102,9 @@ We'll consider a variety of trout species with varying carrying capacities but t
     \item \(r = 0.65\).
     \item \(t \in [0,15]\).
     \item \(y(0) = 1\).
-    \item \(L = 5.4\) is the carrying capacity for Rainbow Trout.
-    \item \(L = 8.1\) is the carrying capacity for Brown Trout.
-    \item \(L = 16.3\) is the carrying capacity for Brook Trout.
+    \item \(L = 5.4\) is the carrying capacity for rainbow trout.
+    \item \(L = 8.1\) is the carrying capacity for brown trout.
+    \item \(L = 16.3\) is the carrying capacity for brook trout.
 \end{itemize}
 Below is the graph of the specific solution:
 \newline
@@ -114,12 +114,12 @@ Below is the graph of the specific solution:
     \caption{Trout Populations modelled by the Specific Solution, Code in Appendix \ref{appendix:A}}
     \label{fig:1}
 \end{figure}
-\noindent As expected, on the graph the Trout species approach their respective carrying capacities as \(t \to \infty\), and when \(t \to 0\) the first population approaches \(y = y_0 = 1\).
+\noindent As expected, on the graph the trout species approach their respective carrying capacities as \(t \to \infty\), and when \(t \to 0\) the first population approaches \(y = y_0 = 1\).
 A better possible point of comparison is \(t = 6\) for 6 months.
-At \(t = 6\), the unharvested Rainbow species is expected to nearly reach it's carrying capacity where it's currently at 500 trout.
-Meanwhile at \(t = 6\), the Brown Trout is expected to reach a population of around 700 trout.
-And for the Brook Trout, at \(t = 6\), it reaches a population of around 1250 trout.
-This point of comparison shows how quickly the Rainbow and Brown Trouts are going to reach their carrying capacities, in comparison to the Brook Trout and how much more massively populate the Brook trouts could be in 6 months, in comparison to the Brown and Rainbow Trout.
+At \(t = 6\), the unharvested rainbow species is expected to nearly reach it's carrying capacity where it's currently at 500 trout.
+Meanwhile at \(t = 6\), the brown trout is expected to reach a population of around 700 trout.
+And for the brook trout, at \(t = 6\), the population reaches around 1250 trout.
+This point of comparison shows how quickly the rainbow and brown trout are going to reach their carrying capacities, as opposed to the brook trout and how much larger the brook trout population could be in 6 months.
 \subsection{Neighborhood Havesting}
 The next part of qualitative analysis is observing how the harvesting function, Equation \eqref{eq:2} changes in relation to the trout population and different constants for \(p\) and \(q\).
 To best visualize this we'll consider \(y \in [0,10]\) and varying values of \(p,q \in \{1, 1.5, 2\}\) as graphed below.
@@ -127,28 +127,28 @@ To best visualize this we'll consider \(y \in [0,10]\) and varying values of \(p
 \begin{figure}[H]
     \centering
     \includesvg[inkscapelatex=false]{./figures/fig.3.3.1}
-    \caption{In our legend \(p\) and \(q\) are annoted as a tuple \((p,q)\), Code in Appendix \ref{appendix:B}}
+    \caption{In our legend \(p\) and \(q\) are annotated as a tuple \((p,q)\), Code in Appendix \ref{appendix:B}}
     \label{fig:2}
 \end{figure}
 From Figure \ref{fig:2} we can derive two important behaviors about the rate of trout harvest.
 \begin{enumerate}
-    \item As trout populations approach 0 no havesting can occur.
+    \item As trout populations approach 0, no harvesting can occur.
     \item As trout populations approach large numbers, the rate of harvesting is limited by the number of people.
 \end{enumerate}
 Analytically, if we observe the limit of the harvesting function, Equation \eqref{eq:2}, as \(y\to 0\) and \(y\to \infty\) this confirms our two observations from our graph. 
 Physically, this would also appear to make sense considering that if there were no trout left to harvest then the rate of harvest would be 0. 
-If there was a very large population of trout, the amount of trout harvested would depend on how many people are harvesting since people can only harvest a finite amount of trout from a very large trout population at a given time.
-Even if a greater temperature decreases the likelyhood of the trout biting, the very large trout population makes this effect minute since it's far more likely any of the trout in the population bite the larger the population is.
+If there was a very large population of trout, the number of trout harvested would depend on how many people are harvesting. The amount of trout harvested by a person is finite for a given time. 
+A large population also makes it far more likely for trout in the population to bite. Even if a higher temperature decreases the likelihood of the trout biting, the large trout population makes this effect minute.
 \subsection{Population Stability}
-The final part to the qualitative analysis is to analyze the equilibrium solutions of Equation \eqref{eq:1}. The ``''equilibrium solutions'' will help identify \(y\) values for which the population of trout tends towards or is tenously balanced at. We'll graph \(\d{y}{t} = f(y)\) for the following conditions:
+The final part to the qualitative analysis is to analyze the equilibrium solutions of Equation \eqref{eq:1}. The ''equilibrium solutions'' will help identify \(y\) values for which the population of trout tends towards or is tenously balanced at. We'll graph \(\d{y}{t} = f(y)\) for the following conditions:
 \begin{itemize}
     \item \(y \in [0, 15]\)
     \item \(p = 1.2\)
     \item \(q = 1.0\)
     \item \(r = 0.65\)
-    \item \(L = 5.4\) for Rainbow Trout
-    \item \(L = 8.1\) for Brown Trout
-    \item \(L = 16.3\) for Brook Trout
+    \item \(L = 5.4\) for rainbow trout
+    \item \(L = 8.1\) for brown trout
+    \item \(L = 16.3\) for brook trout
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -157,15 +157,15 @@ The final part to the qualitative analysis is to analyze the equilibrium solutio
     \label{fig:3}
 \end{figure}
 The roots are a little bit difficult to precisely identify at a first glance on the graph so we can also apply root-finding algorithms\footnote{refer to Appendix \ref{appendix:C} for our specific root finding algorithm} to identify the roots of the above function more closely. 
-The graphs are still helpful because the root finding algorithms can only find a single root so specifiying a range where the root occurs helps to identify the root we're interested in.
+The graphs are still helpful because the root finding algorithms can only find a single root, so specifiying a range where the root occurs helps to identify the root we're interested in.
 The roots for each curve are approximated below:
 \begin{itemize}
-    \item For Rainbow Trout: \(f(y) = 0\) for \(y \in \{0, 0.7050\}\).
-    \item For Brown Trout: \(f(y) = 0\) for \(y \in \{0, 0.8018, 1.8564, 5.4418\}\).
-    \item For Brook Trout: \(f(y) = 0\) for \(y \in \{0, 14.1898\}\).
+    \item For rainbow trout: \(f(y) = 0\) for \(y \in \{0, 0.7050\}\).
+    \item For brown trout: \(f(y) = 0\) for \(y \in \{0, 0.8018, 1.8564, 5.4418\}\).
+    \item For brook trout: \(f(y) = 0\) for \(y \in \{0, 14.1898\}\).
 \end{itemize}
 The significance of the roots is that they denote equilibrium solutions, where the rate of change in the trout population is 0.
-Thus these roots showcase for which values of the trout population does the trout Population stop growing or shrinking.
+Thus these roots showcase values where the trout population stops growing or shrinking.
 Another tool we can use to identify equilibrium solutions is the direction field, which will help visualize the curve of the trout population function and the stability of the equilibrium solutions.
 Direction fields for each trout species are modelled below:
 \begin{figure}[H]
@@ -195,20 +195,20 @@ Direction fields for each trout species are modelled below:
 Some interesting things to note above:
 \begin{itemize}
     \item For all graphs \(y = 0\) is an unstable solution, specifically, all solutions tend away from \(y = 0\).
-    \item The Brown Trout is the only species with 4 equilibrium solutions, 2 stable, 2 unstable:
+    \item The brown trout is the only species with 4 equilibrium solutions, 2 stable, 2 unstable:
         \begin{itemize}
             \item \(y = 0\) is unstable as previously mentioned.
-            \item \(y = 0.8018\) is stable for Brown Trouts.
-            \item \(y = 1.8564\) is unstable for Brown Trouts.
-            \item \(y = 5.4418\) is stable for Brown Trouts.
+            \item \(y = 0.8018\) is stable for brown trouts.
+            \item \(y = 1.8564\) is unstable for brown trouts.
+            \item \(y = 5.4418\) is stable for brown trouts.
         \end{itemize}
-    \item The Rainbow Trout has only one stable equilibrium and it's at a small value for the population.
-    \item The Brook Trout nearly approaches a solution at \(y = 1\) but doesn't actually have one at that point.
-    \item No Trout species can ever go extinct because for all \(y > 0\) the solution tends towards a positive equilibrium state.
-    \item The Brook Trout population always approaches it's maximal stable equilibrium given that \(y > 0\).
+    \item The rainbow trout has only one small stable equilibrium solution for the population at \(y = 0.7050\).
+    \item The brook trout nearly approaches a solution at \(y = 1\) but doesn't actually have one at that point.
+    \item No trout species can ever go extinct because for all \(y > 0\) the solution tends towards a positive equilibrium state.
+    \item The brook trout population always approaches it's maximal stable equilibrium given that \(y > 0\).
 \end{itemize}
 \section{Numerical Analysis} 
-To get a better grasp of the Trout Population in relation to harvesting by the neighborhood, we can also apply Euler's method to approximate the trout population at a given time. 
+To get a better grasp of the trout population in relation to harvesting by the neighborhood, we can also apply Euler's method to approximate the trout population at a given time. 
 We'll utilize Equation \eqref{eq:1} to identify our slope for Euler's Method with the following conditions as well:
 \begin{itemize}
     \item \(p = 1.2\)
@@ -216,9 +216,9 @@ We'll utilize Equation \eqref{eq:1} to identify our slope for Euler's Method wit
     \item \(r = 0.65\)
     \item Euler step size \(h = 0.01\)
     \item \(t \in [0,80]\)
-    \item \(L = 5.4\) for Rainbow Trout
-    \item \(L = 8.1\) for Brown Trout
-    \item \(L = 16.3\) for Brook Trout
+    \item \(L = 5.4\) for rainbow trout
+    \item \(L = 8.1\) for brown trout
+    \item \(L = 16.3\) for brook trout
     \item We'll test \(y(0) \in \{0.5,1,2,20\}\) respectively on new plots for different inital conditions.
 \end{itemize}
 \begin{figure}[H]
@@ -252,13 +252,13 @@ We'll utilize Equation \eqref{eq:1} to identify our slope for Euler's Method wit
     \end{adjustwidth}
 \end{figure}
 \begin{itemize}
-    \item For the Rainbow Trout, all tested inital conditions result in the Trout species nearly dying out.
-    \item For the Brown Trout, inital condtions \(y(0) \in \{2, 20\}\) resulted in the species reaching it's population capacity given the harvest rate
-    \item For the Brook Trout, all test inital conditions proved irrelevant to the trout species eventually reaching it's population capacity given the harvest rate
+    \item For the rainbow trout, all tested inital conditions result in the trout species nearly dying out.
+    \item For the brown trout, inital condtions \(y(0) \in \{2, 20\}\) resulted in the species reaching it's population capacity given the harvest rate
+    \item For the brook trout, all tested inital conditions proved irrelevant to the trout species eventually reaching it's population capacity given the harvest rate
 \end{itemize}
 \section{Conclusion}
-In conclusion, we should choose the Brook Trout since they always reach their carrying capacity, the highest of all the Trout Species, which accommodates the most harvesting. 
-Another big advantage of Brook Trout is that, regardless of the amount the lake is stocked with, we can be assured by our models that they will always reach their maximum population. Even while being harvested. 
+In conclusion, we should choose the brook trout since they always reach their carrying capacity, the highest of all the trout Species, which accommodates the most harvesting. 
+Another big advantage of brook trout is that, regardless of the amount the lake is stocked with, we can be assured by our models that they will always reach their maximum population. Even while being harvested. 
 The other trout differ as their populations settle at their lower stable equilibrium if the initial population is sufficiently small. 
 However, the trout aren’t at risk of being fished out when their populations are low because there is a lack of harvesting. Meaning any trout population satisfies our initial criteria by discretion of the neighborhood conditions. 
 This holds true for the conditions in our models, but many other decisive factors aren’t considered.
@@ -267,7 +267,7 @@ Stocking the lake in the winter could prove detrimental to the trout population.
 Compared to stocking during the spring mating season, which would allow for the trout population to grow much faster. 
 Temperature and the amount of people fishing varies over time as well. 
 Additionally, it would also be worthwhile to consider stocking the lake with a mix of trout species if they are not predators of each other. 
-Having variety in the lake will make fishing a lot more fun, especially with smaller populations like the Rainbow Trout that can serve as a rare trophy catch for would be fishermen in the neighborhood.
+Having variety in the lake will make fishing a lot more fun, especially with smaller populations like the rainbow trout that can serve as a rare trophy catch for would be fishermen in the neighborhood.
 
 \pagebreak
 \begin{appendices}
